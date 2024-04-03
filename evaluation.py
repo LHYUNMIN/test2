@@ -9,7 +9,7 @@ def get_file_list(directory):
 
 
 def calculate_metrics(true_files, pred_files):
-    TP = FP = FN = 0  # TN 계산 제외
+    TP = FP = FN = 0  
 
     for true_file, pred_file in zip(sorted(true_files), sorted(pred_files)):
         with open(true_file, 'r') as f:

@@ -7,6 +7,7 @@ def get_file_list(directory):
     """지정된 디렉토리에서 txt 파일 목록을 반환합니다."""
     return [os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.txt')]
 
+
 def calculate_metrics(true_files, pred_files):
     TP = FP = FN = 0  # TN 계산 제외
 

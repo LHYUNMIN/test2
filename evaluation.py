@@ -1,12 +1,11 @@
 import os
 import argparse
 from pathlib import Path
-# from boxmot.utils import ROOT, WEIGHTS, TRACKER_CONFIGS # 이 줄은 필요한 경우에 따라 주석을 해제하세요.
+
 
 def get_file_list(directory):
     """지정된 디렉토리에서 txt 파일 목록을 반환합니다."""
     return [os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.txt')]
-
 
 def calculate_metrics(true_files, pred_files):
     TP = FP = FN = 0  
